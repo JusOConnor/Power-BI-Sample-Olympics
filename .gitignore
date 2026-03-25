@@ -18,7 +18,9 @@ Thumbs.db
 #Archive
 Archive/
 Raw Data/
+Images/
 
 # PBI
 **/.pbi/localSettings.json
 **/.pbi/cache.abf
+*.pbix
