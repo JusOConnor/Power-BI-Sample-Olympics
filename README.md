@@ -8,7 +8,7 @@ The three cards below change on each page to focus on more revelant stats.
 The Games slicer at the top allows users to switch between Summer and Winter Games while the year slicer at the bottom lets them select one or multiple years.\
 Region and NOC are effectively the region name and the 3 character aggrebviation for it.\
 Nation Olmpic committee (NOC) are the 206 regions recognized by the Internatinal Olympic Committee (IOC) \
-The Medal calculations have two different approaches for the Athelete and NOC levels. \
+The Medal calculations have two different approaches for the Athelete and NOC levels. 
   1. The Athelete results are put in one of four buckets.  Gold, Silver, Bronze, and Appearance (competed, but did not medal). 
   2. The NOC levels based on a DISTINCTCOUNT of EventID where a medal was awarded [^1].  This compensates for Team wins where multiple athletes would be awarded a medal. 
 The original datasets were cleaned using Power Query.  In some cases there were records for Games that did not occur.  Some of the recids that would link tables were inconsistant.  A new Athlete table was build from a summarized copy of the results table and building a new AthleteID combining the existing AthleteID and the NOC.  This addressed join issue with Many-to-Many caused by Athletes having multiple NOCs. 
@@ -25,7 +25,6 @@ The original datasets were cleaned using Power Query.  In some cases there were 
 -The Medal Counts map highlight each Country competing with the saturation based on the % of the total medals won. 
 
 **Mobile Concept:**\
-This was envisioned to work with a live datafeed and the ability to compare years.
      <img src="Screenshots/Executive%20Mobile.png" height="65%"> 
 
 **NOC Summary:**\
