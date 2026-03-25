@@ -9,8 +9,10 @@ The Games slicer at the top allows users to switch between Summer and Winter Gam
 Region and NOC are effectively the region name and the 3 character aggrebviation for it.\
 Nation Olmpic committee (NOC) are the 206 regions recognized by the Internatinal Olympic Committee (IOC) \
 The Medal calculations have two different approaches for the Athelete and NOC levels. \
-  1. The Athelete results are put in one of four buckets.  Gold, Silver, Bronze, and Appearance (competed, but did not medal). \
-  2. The NOC levels based on a DISTINCTCOUNT of EventID where a medal was awarded[^1].  This compensates for Team wins where multiple athletes would be awarded a medal. \
+  1. The Athelete results are put in one of four buckets.  Gold, Silver, Bronze, and Appearance (competed, but did not medal). 
+  2. The NOC levels based on a DISTINCTCOUNT of EventID where a medal was awarded [^1].  This compensates for Team wins where multiple athletes would be awarded a medal. 
+The original datasets were cleaned using Power Query.  In some cases there were records for Games that did not occur.  Some of the recids that would link tables were inconsistant.  A new Athlete table was build from a summarized copy of the results table and building a new AthleteID combining the existing AthleteID and the NOC.  This addressed join issue with Many-to-Many caused by Athletes having multiple NOCs. 
+
 [^1]: The EventID is based on a combination of the Games, Year, and Event name.  
 
 **Executive Summary:**\
@@ -22,8 +24,9 @@ The Medal calculations have two different approaches for the Athelete and NOC le
 -The Top 10 Atheletes by Medals table highlights the Top atheletes based on their total medal count.  Clicking on an individual NOC from the previously mentioned visual will highlight the Top 10 from the NOC only.\
 -The Medal Counts map highlight each Country competing with the saturation based on the % of the total medals won. 
 
-**Mobile Concept:**
-     <img src="Screenshots/Executive%20Mobile.png" width="75%"> 
+**Mobile Concept:**\
+This was envisioned to work with a live datafeed and the ability to compare years.
+     <img src="Screenshots/Executive%20Mobile.png" height="65%"> 
 
 **NOC Summary:**\
 *Who it's for: This page is meant for the people who want to zone in on their Region overall.*\
@@ -45,7 +48,7 @@ The Medal calculations have two different approaches for the Athelete and NOC le
     *Selecting from the Athletes Resuts visual*\
     <img src="Screenshots/Athlete%20Summary%20-%20List%20Filtered.png" width="75%"> \
     *Utilizing the Search slicer to narrow down the list*\
-    <img src="Screenshots/AAthlete%20Summary%20-%20Search%20Filtered.png" width="75%">
+    <img src="Screenshots/Athlete%20Summary%20-%20Search%20Filtered.png" width="75%">
 
 
 **Color Hex Codes:**
